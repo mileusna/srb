@@ -1,6 +1,6 @@
 # gocyr
 
-Converts string from Cyrillic to Latin and backward for Serbian language
+Converts string to/from Cyrillic/Latin for Serbian language
 
 ## Documentation
 
