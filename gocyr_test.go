@@ -14,13 +14,13 @@ func TestCyr(t *testing.T) {
 	var exp, res, param string
 
 	param = "кашњење у плаћању пореза"
-	if !gocyr.IsCyr(param) {
-		t.Errorf("IsCyr() returns false for string `%s`\n", param)
+	if !gocyr.HasCyr(param) {
+		t.Errorf("HasCyr() returns false for string `%s`\n", param)
 	}
 
 	param = "nema ćirilice ovde"
-	if gocyr.IsCyr(param) {
-		t.Errorf("IsCyr() returns true for string `%s`\n", param)
+	if gocyr.HasCyr(param) {
+		t.Errorf("HasCyr() returns true for string `%s`\n", param)
 	}
 
 	exp = "Novak Đoković"

@@ -38,9 +38,9 @@ func FixDj(s string) string {
 }
 
 /*
-   IsCyr returns true if string contains at least one cyrillic character
+   HasCyr returns true if string contains at least one cyrillic character
 */
-func IsCyr(s string) bool {
+func HasCyr(s string) bool {
 	return (strings.IndexAny(s, cyr) != -1)
 }
 

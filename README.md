@@ -19,7 +19,7 @@ import (
 func main() {
     fmt.Println(gocyr.ToCyr("Kragujevac"))
     fmt.Println(gocyr.ToLat("кошарка"))
-	fmt.Println(gocyr.IsCyr("Ima li ћирилице u ovom stringu?"))
+	fmt.Println(gocyr.HasCyr("Ima li ћирилице u ovom stringu?"))
     fmt.Println(gocyr.FixDj("Novak Djoković"))
     fmt.Println(gocyr.HtmlToCyr("<h1><a href='http://naslovi.net/'>Vesti dana</a></h1>"))
 }
