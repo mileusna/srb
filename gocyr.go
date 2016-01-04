@@ -4,7 +4,6 @@
 package gocyr
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 )
@@ -52,19 +51,18 @@ func HtmlToCyr(html string) string {
 	return htmlRegex.ReplaceAllStringFunc(html, ToCyr)
 }
 
-/*
-   HtmlToLat converts string that contains html tags from cyrillic to latin
-   Not needed actually
-*/
+// /*
+//    HtmlToLat converts string that contains html tags from cyrillic to latin
+//    Not needed actually
+// */
 // func HtmlToLat(html string) string {
 // 	return htmlRegex.ReplaceAllStringFunc(html, ToLat)
 // }
 
-func dummy() {
-	lat := []rune("ERTZUIOPŠĐASDFGHJKLČĆCVBNMŽertzuiopšđasdfghjklčćcvbnmž")
-	cyr := []rune("ЕРТЗУИОПШЂАСДФГХЈКЛЧЋЦВБНМЖертзуиопшђасдфгхјклчћцвбнмж")
-	for i := 0; i < len(lat); i++ {
-		fmt.Printf("\"%s\", \"%s\", ", string(lat[i]), string(cyr[i]))
-
-	}
-}
+// func dummy() {
+// 	lat := []rune("ERTZUIOPŠĐASDFGHJKLČĆCVBNMŽertzuiopšđasdfghjklčćcvbnmž")
+// 	cyr := []rune("ЕРТЗУИОПШЂАСДФГХЈКЛЧЋЦВБНМЖертзуиопшђасдфгхјклчћцвбнмж")
+// 	for i := 0; i < len(lat); i++ {
+// 		fmt.Printf("\"%s\", \"%s\", ", string(lat[i]), string(cyr[i]))
+// 	}
+// }

@@ -4,7 +4,7 @@ Converts string from Cyrillic to Latin and backward for Serbian language
 
 ## Documentation
 
-[https://godoc.org/github.com/mileusna/gocyr]: https://godoc.org/github.com/mileusna/gocyr
+[https://godoc.org/github.com/mileusna/gocyr](https://godoc.org/github.com/mileusna/gocyr)
 
 ## Examples
 
