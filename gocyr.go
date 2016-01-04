@@ -1,5 +1,6 @@
 /*
- */
+	gocyr Converts string from Cyrillic to Latin and backward for Serbian language
+*/
 package gocyr
 
 import (
