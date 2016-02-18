@@ -1,4 +1,4 @@
-# gocyr
+# gocyr [![GoDoc](https://godoc.org/github.com/mileusna/gocyr?status.png)][godoc]
 
 Converts string to/from Cyrillic/Latin for Serbian language
 
