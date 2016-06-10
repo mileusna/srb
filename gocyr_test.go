@@ -42,8 +42,14 @@ func TestCyr(t *testing.T) {
 	}
 
 	exp = "<h1><a href='http://www.naslovi.net/'>Вести дана - Наслови.нет</a></h1>"
-	res = gocyr.HtmlToCyr("<h1><a href='http://www.naslovi.net/'>Vesti dana - Naslovi.net</a></h1>")
+	res = gocyr.HTMLToCyr("<h1><a href='http://www.naslovi.net/'>Vesti dana - Naslovi.net</a></h1>")
 	if res != exp {
-		t.Errorf("HtmlToCyr() result `%s` doesn't match expected result `%s`\n", res, exp)
+		t.Errorf("HTMLToCyr() result `%s` doesn't match expected result `%s`\n", res, exp)
+	}
+
+	exp = "Milos Djordjevic Zarkov cukundeda"
+	res = gocyr.ToASCII("Miloš Đorđević Žarkov cukundeda")
+	if res != exp {
+		t.Errorf("ToASCII() result `%s` doesn't match expected result `%s`\n", res, exp)
 	}
 }
