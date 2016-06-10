@@ -1,6 +1,6 @@
-# gocyr [![GoDoc](https://godoc.org/github.com/mileusna/gocyr?status.svg)](https://godoc.org/github.com/mileusna/gocyr)
+# srb [![GoDoc](https://godoc.org/github.com/mileusna/gocyr?status.svg)](https://godoc.org/github.com/mileusna/gocyr)
 
-Converts string to/from Cyrillic/Latin for Serbian language, including some other utility functions for Serbian script.
+Package srb converts string to/from Cyrillic/Latin for Serbian language, including some other utility functions for Serbian script.
 
 ## Examples
 
