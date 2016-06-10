@@ -1,5 +1,4 @@
-# gocyr
-[![GoDoc](https://godoc.org/github.com/mileusna/gocyr?status.svg)](https://godoc.org/github.com/mileusna/gocyr)
+# gocyr [![GoDoc](https://godoc.org/github.com/mileusna/gocyr?status.svg)](https://godoc.org/github.com/mileusna/gocyr)
 
 Converts string to/from Cyrillic/Latin for Serbian language, including some other utility functions for Serbian script.
 
@@ -10,15 +9,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/mileusna/gocyr"
+	"github.com/mileusna/srb"
 )
 
 func main() {
-    fmt.Println(gocyr.ToCyr("Kragujevac"))
-    fmt.Println(gocyr.ToLat("кошарка"))
-	fmt.Println(gocyr.HasCyr("Ima li ћирилице u ovom stringu?"))
-    fmt.Println(gocyr.FixDj("Novak Djoković"))
-    fmt.Println(gocyr.HTMLToCyr("<h1><a href='http://naslovi.net/'>Vesti dana</a></h1>"))
-    fmt.Println(gocyr.ToASCII("Miloš"))
+    fmt.Println(srb.ToCyr("Kragujevac"))
+    fmt.Println(srb.ToLat("кошарка"))
+	fmt.Println(srb.HasCyr("Ima li ћирилице u ovom stringu?"))
+    fmt.Println(srb.FixDj("Novak Djoković"))
+    fmt.Println(srb.HTMLToCyr("<h1><a href='http://naslovi.net/'>Vesti dana</a></h1>"))
+    fmt.Println(srb.ToASCII("Miloš"))
 }
 ```
