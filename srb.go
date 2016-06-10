@@ -1,7 +1,7 @@
 /*
-	gocyr Converts string to/from Cyrillic/Latin for Serbian language
+	srb Converts string to/from Cyrillic/Latin for Serbian language
 */
-package gocyr
+package srb
 
 import (
 	"regexp"
