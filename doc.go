@@ -19,5 +19,4 @@ Example:
         fmt.Println(srb.ToASCII("Miloš"))
     }
 */
-
 package srb
