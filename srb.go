@@ -1,6 +1,3 @@
-/*
-	srb Converts string to/from Cyrillic/Latin for Serbian language
-*/
 package srb
 
 import (
