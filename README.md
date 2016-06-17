@@ -1,4 +1,4 @@
-# srb [![GoDoc](https://godoc.org/github.com/mileusna/gocyr?status.svg)](https://godoc.org/github.com/mileusna/gocyr)
+# Srb for Go <a href="https://godoc.org/github.com/mileusna/srb"><img src="https://godoc.org/github.com/mileusna/srb?status.svg" alt="GoDoc"></a>
 
 Package srb converts string to/from Cyrillic/Latin for Serbian language, including some other utility functions for Serbian script.
 
@@ -21,3 +21,7 @@ func main() {
     fmt.Println(srb.ToASCII("Miloš"))
 }
 ```
+
+## License
+
+[MIT](LICENSE)
