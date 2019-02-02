@@ -14,60 +14,32 @@ var (
 	htmlRegex, _ = regexp.Compile("(^|>)([^<]*)(<|$)")
 )
 
-/*
-   ToLat converts string from cyrillic to latin
-*/
+// ToLat converts string from cyrillic to latin
 func ToLat(s string) string {
 	return toLat.Replace(s)
 }
 
-/*
-   ToCyr converts string from latin to cyrillic
-*/
+// ToCyr converts string from latin to cyrillic
 func ToCyr(s string) string {
 	return toCyr.Replace(s)
 }
 
-/*
-   FixDj replaces Dj with Đ, uppercase and lowercase
-*/
+// FixDj replaces Dj with Đ, uppercase and lowercase
 func FixDj(s string) string {
 	return fixDj.Replace(s)
 }
 
-/*
-   ToASCII replaces šđćčžŠĐČĆŽ with sdjcczSDJCCZ
-*/
+// ToASCII replaces šđćčžŠĐČĆŽ with sdjcczSDJCCZ
 func ToASCII(s string) string {
 	return toASCII.Replace(s)
 }
 
-/*
-   HasCyr returns true if string contains at least one cyrillic character
-*/
+// HasCyr returns true if string contains at least one cyrillic character
 func HasCyr(s string) bool {
 	return (strings.IndexAny(s, cyr) != -1)
 }
 
-/*
-   HtmlToCyr converts string that contains HTML tags from latin to cyrillic, preserving HTML tags in latin
-*/
+// HTMLToCyr converts string that contains HTML tags from latin to cyrillic, preserving HTML tags in latin
 func HTMLToCyr(html string) string {
 	return htmlRegex.ReplaceAllStringFunc(html, ToCyr)
 }
-
-// /*
-//    HtmlToLat converts string that contains html tags from cyrillic to latin
-//    Not needed actually
-// */
-// func HtmlToLat(html string) string {
-// 	return htmlRegex.ReplaceAllStringFunc(html, ToLat)
-// }
-
-// func dummy() {
-// 	lat := []rune("ERTZUIOPŠĐASDFGHJKLČĆCVBNMŽertzuiopšđasdfghjklčćcvbnmž")
-// 	cyr := []rune("ЕРТЗУИОПШЂАСДФГХЈКЛЧЋЦВБНМЖертзуиопшђасдфгхјклчћцвбнмж")
-// 	for i := 0; i < len(lat); i++ {
-// 		fmt.Printf("\"%s\", \"%s\", ", string(lat[i]), string(cyr[i]))
-// 	}
-// }
