@@ -3,6 +3,7 @@ package srb
 import (
 	"regexp"
 	"strings"
+	"time"
 )
 
 var (
@@ -12,6 +13,8 @@ var (
 	fixDj        = strings.NewReplacer("Dj", "Đ", "DJ", "Đ", "dj", "đ")
 	toASCII      = strings.NewReplacer("š", "s", "đ", "dj", "č", "c", "ć", "c", "ž", "z", "Š", "S", "Đ", "Dj", "Č", "C", "Ć", "C", "Ž", "Z")
 	htmlRegex, _ = regexp.Compile("(^|>)([^<]*)(<|$)")
+	months       = []string{"januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar"}
+	weekdays     = []string{"nedelja", "ponedeljak", "utorak", "sreda", "četvrtak", "petak", "subota"}
 )
 
 // ToLat converts string from cyrillic to latin
@@ -42,4 +45,24 @@ func HasCyr(s string) bool {
 // HTMLToCyr converts string that contains HTML tags from latin to cyrillic, preserving HTML tags in latin
 func HTMLToCyr(html string) string {
 	return htmlRegex.ReplaceAllStringFunc(html, ToCyr)
+}
+
+// Month returns serbian name of the month for specified date
+func Month(t time.Time) string {
+	return months[t.Month()-1]
+}
+
+// MonthShort returns serbian short name of the month for specified date
+func MonthShort(t time.Time) string {
+	return months[t.Month()-1][:3]
+}
+
+// Weekday returns day of week in Serbian language for specified date
+func Weekday(t time.Time) string {
+	return weekdays[t.Weekday()]
+}
+
+// WeekdayShort returns short version day of week in Serbian language for specified date
+func WeekdayShort(t time.Time) string {
+	return weekdays[t.Weekday()][:3]
 }
