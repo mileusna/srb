@@ -36,6 +36,12 @@ func TestCyr(t *testing.T) {
 		t.Errorf("ToCyr() result `%s` doesn't match expected result `%s`\n", res, exp)
 	}
 
+	exp = "ексцлусив ББЦ невс дисцовери"
+	res = srb.ToCyr("exclusiv BBC news discovery")
+	if res != exp {
+		t.Errorf("ToCyr() result `%s` doesn't match expected result `%s`\n", res, exp)
+	}
+
 	exp = "Novak Đoković"
 	res = srb.FixDj("Novak Djoković")
 	if res != exp {
