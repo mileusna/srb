@@ -36,8 +36,8 @@ func TestCyr(t *testing.T) {
 		t.Errorf("ToCyr() result `%s` doesn't match expected result `%s`\n", res, exp)
 	}
 
-	exp = "ексцлусив ББЦ невс дисцовери"
-	res = srb.ToCyr("exclusiv BBC news discovery")
+	exp = "ексцлусив ББЦ невс дисцовери КСВИ"
+	res = srb.ToCyr("exclusiv BBC news discovery XWY")
 	if res != exp {
 		t.Errorf("ToCyr() result `%s` doesn't match expected result `%s`\n", res, exp)
 	}
